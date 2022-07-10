@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog clock</title>
+</head>
+<body>
+
+    <style>
+       body{
+           text-align-last: center;
+       }
+        .clock{
+            width: 500px;
+            height: 500px;
+            background: burlywood;
+            display: inline-block;
+            border-radius: 50%;
+            border: 10px solid #000;
+            padding: 20px;
+        }
+         
+         .sec, .min, .hour{
+             line-height: 45px;
+             position: relative;
+             transform-origin:bottom;
+         }
+
+        .sec{
+            height: 250px;
+            width: 5px;
+            left: 245px;
+            background: #FF0000;
+            z-index: 3;
+            animation: sec_anim 60s linear infinite;
+        }
+        .min{
+            height: 250px;
+            width: 10px;
+            left: 245px;
+            background: #161414;
+            top: -250px;
+            z-index: 2;
+            animation: min_anim 3600s linear infinite;
+        }
+        .hour{
+            height: 180px;
+            width: 14px;
+            left: 243px;
+            top: -430px;
+            background: #867731;
+            z-index: 1;
+            animation: hour_anim 43200s linear infinite;
+        }
+        @keyframes sec_anim{
+            from{transform: rotateZ(0deg);}
+            to{transform: rotateZ(360deg);}
+        }
+        @keyframes min_anim{
+            from{transform: rotateZ(0deg);}
+            to{transform: rotateZ(360deg);}
+        }
+        @keyframes hour_anim{
+            from{transform: rotateZ(0deg);}
+            to{transform: rotateZ(360deg);}
+        }
+        .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten,.eleven, .twelve{
+            font-family: Arial;
+            font-size: 3.7em;
+            position: relative;
+            color: steelblue;
+            text-shadow: wheat;
+            z-index: 0;
+        }
+        .one{
+            top: -640px;
+            left: 123px;
+        }
+        .two{
+            top: -629px;
+            left: 192px;
+        }
+        .three{
+            top: -603px;
+            left: 220px;
+        }
+        .four{
+            top: -564px;
+            left: 203px;
+        }
+        .five{
+            top: -552px;
+            left: 116px;
+        }
+        .six{
+            top: -580px;
+        }
+        .seven{
+            top: -691px;
+            left: -116px;
+        }
+        .eight{
+            top: -840px;
+            left: -203px;
+        }
+        .nine{
+            top: -1016px;
+            left: -238px;
+        }
+        .ten{
+            top: -1181px;
+            left: -199px;
+        }
+        .eleven{
+            top: -1330px;
+            left: -123px;
+        }
+        .twelve{
+            top: -1450px;
+        }
+        .clock:hover{
+    background-color: rgb(129, 211, 211);
+}
+
+    </style>
+
+
+
+        <div class="clock">
+        <div class="sec"></div>
+        <div class="min"></div>
+        <div class="hour"></div>
+
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven">7</div>
+        <div class="eight">8</div>
+        <div class="nine">9</div>
+        <div class="ten">10</div>
+        <div class="eleven">11</div>
+        <div class="twelve">12</div>
+        </div>
+</body>
+</html>
